@@ -48,16 +48,7 @@ class SwiftTowerTests: XCTestCase {
             towerStacks[.Tower1]?.push(index)
         }
         
-        towerInteractive(numberOfDisks, towerStacks)
+        towerInteractive(numberOfDisks, towerStacks) //results in tower 2 as the destination
         XCTAssert(checkTower(towerStacks[.Tower2]!, numberOfDisks: numberOfDisks), "Pass")
-        
-        /*
-        for (tower, stack) in towerStacks {
-            println("\(tower.toRaw())")
-            while (stack.isEmty() == false) {
-                println(stack.pop())
-            }
-            println("---")
-        }*/
     }
 }
