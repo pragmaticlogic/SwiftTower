@@ -79,7 +79,6 @@ func getTowerWhereToMoveDiskTo(#referenceTower:Tower, towerStacks: [Tower: Stack
 
 func towerInteractive(numberOfDisks: Int, towerStacks: [Tower: Stack<Int>]) {
     var towerWhere1Is = Tower.Tower1
-    var directionToMoveTheNon1Disk = ClockDirection.Clockwise
     
     let iterations: Int = Int(pow(Double(2),Double(numberOfDisks))) - 1
     
@@ -107,9 +106,6 @@ func towerInteractive(numberOfDisks: Int, towerStacks: [Tower: Stack<Int>]) {
             newStack.push(disk)
             
             println("Move \(disk) from \(towerWhereToGetDiskFrom.toRaw()) to \(towerWhereToMoveDiskTo.toRaw())")
-            
-            //update the direction to move non-1 disk
-            directionToMoveTheNon1Disk = directionToMoveTheNon1Disk == .Clockwise ? .CounterClockwise : .Clockwise
         }
     }
 }
