@@ -22,21 +22,42 @@ class SwiftTowerTests: XCTestCase {
         super.tearDown()
     }
     
+    func checkTower(dest:Stack<Int>, numberOfDisks:Int) -> Bool {
+        var match = true
+        var index = 1
+        while match && dest.size() > 0 && index <= numberOfDisks {
+            match = dest.pop() == index
+            index++
+        }
+        return match
+    }
+    
     func testRecursiveTowerOfHanoi() {
         let numberOfDisks = 4
         let destStack:Stack<Int> = Stack<Int>()
         
-        func checkTower(dest:Stack<Int>, numberOfDisks:Int) -> Bool {
-            var match = true
-            var index = 1
-            while match && dest.size() > 0 && index <= numberOfDisks {
-                match = dest.pop() == index
-                index++
-            }
-            return match
+        tower(numberOfDisks, source:.Tower1, dest:.Tower3 , temp:.Tower2, finalDest:.Tower3, destStack)
+        XCTAssert(checkTower(destStack, numberOfDisks: numberOfDisks), "Pass")
+    }
+    
+    func testInteractiveTowerOfHanoi() {
+        let towerStacks: [Tower: Stack<Int>] = [.Tower1: Stack<Int>(), .Tower2: Stack<Int>(), .Tower3: Stack<Int>()]
+        
+        let numberOfDisks = 4
+        for var index = numberOfDisks; index > 0; index-- {
+            towerStacks[.Tower1]?.push(index)
         }
         
-        tower(numberOfDisks, source:.Tower1, dest:.Tower3 , temp:.Tower2, finalDest:.Tower3, destStack)
-        XCTAssert(checkTower(destStack, numberOfDisks), "Pass")
+        towerInteractive(numberOfDisks, towerStacks)
+        XCTAssert(checkTower(towerStacks[.Tower2]!, numberOfDisks: numberOfDisks), "Pass")
+        
+        /*
+        for (tower, stack) in towerStacks {
+            println("\(tower.toRaw())")
+            while (stack.isEmty() == false) {
+                println(stack.pop())
+            }
+            println("---")
+        }*/
     }
 }

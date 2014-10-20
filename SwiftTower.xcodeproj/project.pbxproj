@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D4C75E519F4EAF200807F10 /* SwiftTowerInteractive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4C75E419F4EAF200807F10 /* SwiftTowerInteractive.swift */; };
+		1D4C75E619F4EC4900807F10 /* SwiftTowerInteractive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4C75E419F4EAF200807F10 /* SwiftTowerInteractive.swift */; };
 		1DFCB78519F38C8E00577869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCB78419F38C8E00577869 /* AppDelegate.swift */; };
 		1DFCB78719F38C8E00577869 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCB78619F38C8E00577869 /* ViewController.swift */; };
 		1DFCB78A19F38C8F00577869 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DFCB78819F38C8F00577869 /* Main.storyboard */; };
@@ -31,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D4C75E419F4EAF200807F10 /* SwiftTowerInteractive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftTowerInteractive.swift; sourceTree = "<group>"; };
 		1DFCB77F19F38C8E00577869 /* SwiftTower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DFCB78319F38C8E00577869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DFCB78419F38C8E00577869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 			children = (
 				1DFCB78319F38C8E00577869 /* Info.plist */,
 				1DFCB7A919F3964C00577869 /* Stack.swift */,
+				1D4C75E419F4EAF200807F10 /* SwiftTowerInteractive.swift */,
 				1DFCB7A419F38CCA00577869 /* SwiftTowerRecursive.swift */,
 			);
 			name = "Supporting Files";
@@ -224,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DFCB7AA19F3964C00577869 /* Stack.swift in Sources */,
+				1D4C75E519F4EAF200807F10 /* SwiftTowerInteractive.swift in Sources */,
 				1DFCB78719F38C8E00577869 /* ViewController.swift in Sources */,
 				1DFCB78519F38C8E00577869 /* AppDelegate.swift in Sources */,
 				1DFCB7A519F38CCA00577869 /* SwiftTowerRecursive.swift in Sources */,
@@ -235,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DFCB7AB19F3965100577869 /* Stack.swift in Sources */,
+				1D4C75E619F4EC4900807F10 /* SwiftTowerInteractive.swift in Sources */,
 				1DFCB7A619F38EF400577869 /* SwiftTowerRecursive.swift in Sources */,
 				1DFCB7A819F38F4600577869 /* SwiftTowerTestStack.swift in Sources */,
 				1DFCB79B19F38C8F00577869 /* SwiftTowerTests.swift in Sources */,
@@ -421,6 +427,7 @@
 				1DFCB7A019F38C8F00577869 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1DFCB7A119F38C8F00577869 /* Build configuration list for PBXNativeTarget "SwiftTowerTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +436,7 @@
 				1DFCB7A319F38C8F00577869 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
