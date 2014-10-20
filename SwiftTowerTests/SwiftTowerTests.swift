@@ -36,7 +36,7 @@ class SwiftTowerTests: XCTestCase {
             return match
         }
         
-        tower(numberOfDisks, source:.Tower1, dest:.Tower3 , temp:.Tower2, destStack)
+        tower(numberOfDisks, source:.Tower1, dest:.Tower3 , temp:.Tower2, finalDest:.Tower3, destStack)
         XCTAssert(checkTower(destStack, numberOfDisks), "Pass")
     }
 }
