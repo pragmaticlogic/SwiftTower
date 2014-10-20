@@ -16,16 +16,16 @@ enum Tower : String {
     case Tower3 = "Tower 3"
 }
 
-func tower(numberOfDisks: Int, source x: Tower, dest y: Tower, temp z: Tower, destStack:Stack<Int>) {
+func tower(numberOfDisks: Int, source x: Tower, dest y: Tower, temp z: Tower, finalDest f:Tower, destStack:Stack<Int>) {
     if (numberOfDisks > 0) {
-        tower(numberOfDisks - 1, source:x, dest:z, temp:y, destStack)
+        tower(numberOfDisks - 1, source:x, dest:z, temp:y, finalDest:f, destStack)
         println("Move disk \(numberOfDisks) from \(x.toRaw()) to \(y.toRaw())")
-        if (x == .Tower3) {
+        if (x == f) {
             destStack.pop()
-        } else if (y == .Tower3) {
+        } else if (y == f) {
             destStack.push(numberOfDisks)
         }
-        tower(numberOfDisks - 1, source:z, dest:y, temp:x, destStack)
+        tower(numberOfDisks - 1, source:z, dest:y, temp:x, finalDest:f, destStack)
     }
 }
 
